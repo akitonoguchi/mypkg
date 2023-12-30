@@ -28,6 +28,7 @@ setup(
             'listener = mypkg.listener:main',
             'problem = mypkg.problem:main',
             'answer = mypkg.answer:main',
+            'fibonacci = mypkg.fibonacci:main',
         ],
     },
 )
