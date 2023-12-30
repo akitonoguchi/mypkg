@@ -4,7 +4,7 @@ from std_msgs.msg import Int16
 
 class Talker():
     def __init__(self, nh):
-        self.pub = node.create_publisher(Int16, "countup", 10)
+        self.pub = nh.create_publisher(Int16, "countup", 10)
         self.n = 0
         nh.create_timer(0.5, self.cb)
 
@@ -20,5 +20,5 @@ def main():
     talker = Talker(node)
     rclpy.spin(node)
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     main()
