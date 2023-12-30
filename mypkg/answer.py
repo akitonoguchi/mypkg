@@ -1,14 +1,15 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int16
+import time
 
-class ListenerNode(Node):
+class answer_subscription(Node):
 
     def __init__(self):
         super().__init__('listener')
         self.subscription = self.create_subscription(
             Int16, 'random_number', self.listener_callback, 10)
-        self.subscription  # prevent unused variable warning
+        self.start_time = time.time()
 
     def listener_callback(self, msg):
         number = msg.data
@@ -29,10 +30,9 @@ class ListenerNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    listener_node = ListenerNode()
-    rclpy.spin(listener_node)
-    listener_node.destroy_node()
-    rclpy.shutdown()
+    answer = answer_subscription()
+    while rclpy.ok():
+        rclpy.spin_once(answer, timeout_sec=1)
 
 
 if __name__ == '__main__':

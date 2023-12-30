@@ -26,8 +26,8 @@ setup(
         'console_scripts': [
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
-            'talker_node = mypkg.talker_node:main',
-            'listener_node = mypkg.listener_node:main',
+            'problem = mypkg.problem:main',
+            'answer = mypkg.answer:main',
         ],
     },
 )
