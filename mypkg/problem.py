@@ -24,8 +24,8 @@ class problem_publisher(Node):
             self.destroy_node()
             rclpy.shutdown()
 
-def main(args=None):
-    rclpy.init(args=args)
+def main():
+    rclpy.init()
     problem = problem_publisher()
     while rclpy.ok():
         rclpy.spin_once(problem, timeout_sec=1)
