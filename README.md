@@ -26,7 +26,7 @@
 * フィボナッチ数列の値を計算するノードです.  計算結果を順に表示します.
 
 ## 実行手順と実行例
-### talkerとlistener 
+### talker.pyとlistener.py  
 * `ros2 run`で実行する方法  
 
 ```
@@ -42,7 +42,8 @@
                          .
 ```
 実行後上記のように表示.    
-終了するときは`ctrl+C`を入力.
+終了するときは`ctrl+C`を入力.  
+
 
 * `ros2 launch`で実行する方法  
 
@@ -63,3 +64,40 @@ $ ros2 launch mypkg talk_listen.launch.py
 ``` 
 実行後上記のように表示.  
 終了するときは`ctrl+C`を入力.  
+
+
+### problem.pyとanswer.py  
+
+```
+端末1$ ros2 run mypkg answer
+```
+
+端末1で先にanswer.pyを実行しておいてください.
+
+```
+端末2$ ros2 run mypkg problem
+[INFO] [1703927729.597357600] [Number]: Publishing: 968
+[INFO] [1703927730.583074300] [Number]: Publishing: 827
+[INFO] [1703927731.581323200] [Number]: Publishing: 925
+[INFO] [1703927732.581826200] [Number]: Publishing: 612
+[INFO] [1703927733.581454700] [Number]: Publishing: 883
+                           .  
+                           .  
+[INFO] [1703927849.396617800] [Number]: finish
+```
+
+その後、端末1に戻ると結果が表示されます.
+
+```
+[INFO] [1703927729.629098700] [Answer]: 968 は素数ではないです
+[INFO] [1703927730.586846100] [Answer]: 827 は素数です
+[INFO] [1703927731.582240900] [Answer]: 925 は素数ではないです
+[INFO] [1703927732.583410000] [Answer]: 612 は素数ではないです
+[INFO] [1703927733.582418700] [Answer]: 883 は素数です
+                           .  
+                           .  
+```
+
+problem.pyは60秒が経過すると停止します.
+
+

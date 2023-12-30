@@ -8,7 +8,7 @@ import time
 class answer_subscription(Node):
 
     def __init__(self):
-        super().__init__('listener')
+        super().__init__('Answer')
         self.subscription = self.create_subscription(
             Int16, 'random_number', self.listener_callback, 10)
         self.start_time = time.time()

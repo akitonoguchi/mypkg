@@ -9,7 +9,7 @@ import time
 class problem_publisher(Node):
 
     def __init__(self):
-        super().__init__('talker')
+        super().__init__('Number')
         self.publisher = self.create_publisher(Int16, 'random_number', 10)
         self.timer = self.create_timer(1, self.timer_callback)
         self.start_time = time.time()
