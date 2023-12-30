@@ -41,9 +41,9 @@
                          .  
                          .
 ```
+
 実行後上記のように表示.    
 終了するときは`ctrl+C`を入力.  
-
 
 * `ros2 launch`で実行する方法  
 
@@ -61,9 +61,12 @@ $ ros2 launch mypkg talk_listen.launch.py
 [listener-2] [INFO] [1703926760.697104100] [listener]: Listen: 5
                                 .  
                                 .  
-``` 
+```
+ 
 実行後上記のように表示.  
 終了するときは`ctrl+C`を入力.  
+
+---
 
 
 ### problem.pyとanswer.py  
@@ -86,6 +89,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 [INFO] [1703927849.396617800] [Number]: finish
 ```
 
+表示される整数はランダムです.
 その後、端末1に戻ると結果が表示されます.
 
 ```
@@ -99,5 +103,35 @@ $ ros2 launch mypkg talk_listen.launch.py
 ```
 
 problem.pyは60秒が経過すると停止します.
+
+
+---
+
+
+### fibonacci.py
+
+```
+$ ros2 run mypkg fibonacci
+[INFO] [1703928735.922960600] [Fibonacci]: 計算結果: 0
+[INFO] [1703928736.911557900] [Fibonacci]: 計算結果: 1
+[INFO] [1703928737.912669500] [Fibonacci]: 計算結果: 1
+[INFO] [1703928738.913622300] [Fibonacci]: 計算結果: 2
+[INFO] [1703928739.913252300] [Fibonacci]: 計算結果: 3
+[INFO] [1703928740.912661300] [Fibonacci]: 計算結果: 5
+[INFO] [1703928741.912101900] [Fibonacci]: 計算結果: 8
+[INFO] [1703928742.913424400] [Fibonacci]: 計算結果: 13
+                           .  
+                           .  
+```
+
+実行後上記のように表示.  
+終了するときは`ctrl+C`を入力.  
+
+## テスト環境
+
+* Ubuntu 20.04
+* ROS2 foxy
+
+## 権利関係
 
 
