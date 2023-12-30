@@ -27,5 +27,39 @@
 
 ## 実行手順と実行例
 ### talkerとlistener 
+* `ros2 run`で実行する方法  
 
+```
+端末1$ ros2 run mypkg talker  
+端末2$ ros2 run mypkg listener  
+[INFO] [1703926331.295823100] [listener]: Listen: 0  
+[INFO] [1703926331.758097600] [listener]: Listen: 1  
+[INFO] [1703926332.258281500] [listener]: Listen: 2  
+[INFO] [1703926332.759116300] [listener]: Listen: 3  
+[INFO] [1703926333.260979500] [listener]: Listen: 4  
+[INFO] [1703926333.758617800] [listener]: Listen: 5  
+                         .  
+                         .
+```
+実行後上記のように表示.    
+終了するときは`ctrl+C`を入力.
 
+* `ros2 launch`で実行する方法  
+
+```
+$ ros2 launch mypkg talk_listen.launch.py
+[INFO] [launch]: All log files can be found below /home/akito/.ros/log/2023-12-30-17-59-17-233176-akitonoguchi99-17261
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [talker-1]: process started with pid [17263]
+[INFO] [listener-2]: process started with pid [17265]
+[listener-2] [INFO] [1703926758.215602600] [listener]: Listen: 0
+[listener-2] [INFO] [1703926758.694193700] [listener]: Listen: 1
+[listener-2] [INFO] [1703926759.194986500] [listener]: Listen: 2
+[listener-2] [INFO] [1703926759.695048500] [listener]: Listen: 3
+[listener-2] [INFO] [1703926760.194053000] [listener]: Listen: 4
+[listener-2] [INFO] [1703926760.697104100] [listener]: Listen: 5
+                                .  
+                                .  
+``` 
+実行後上記のように表示.  
+終了するときは`ctrl+C`を入力.  
