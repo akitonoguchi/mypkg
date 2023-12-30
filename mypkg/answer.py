@@ -28,8 +28,8 @@ class answer_subscription(Node):
         return True
 
 
-def main(args=None):
-    rclpy.init(args=args)
+def main():
+    rclpy.init()
     answer = answer_subscription()
     while rclpy.ok():
         rclpy.spin_once(answer, timeout_sec=1)
